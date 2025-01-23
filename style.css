@@ -1,0 +1,32 @@
+body {
+    background-color: #121212;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    width: 260px; /* Adjust container width to fit new buttons */
+    margin: 150px auto; /* Center the container horizontally */
+}
+
+.inner-container {
+    height: 20px; /* Set a fixed height */
+    background-color: #333;
+    color: white;
+    font-size: 12px;
+    border: thin solid #444; /* Add a border */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 7px; /* Space between buttons */
+    padding: 5px;
+}
+.display {
+    width: auto;
+    height: 30px;
+   background-color: #333;
+   color: white;
+   font-size: 15px;
+    
+}
