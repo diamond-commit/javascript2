@@ -38,3 +38,22 @@ body {
 
     
 }
+@media (max-width: 600px) {
+   body{
+    h1{
+        font-size: 25px;
+    }
+    .display {
+        width: 290px;
+        height: 30px;
+       background-color: #121212;
+       color: white;
+       font-size: 25px;
+       margin-bottom: -130px;
+       margin-top: 130px;
+       margin-left: 52px;
+       text-align: center;
+       font-style: initial;
+    }
+   }
+}
