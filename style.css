@@ -1,11 +1,13 @@
 body {
     background-color: #121212;
 }
-
+ h1{
+    color: white;
+ }
 .container {
     display: grid;
     grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    width: 260px; /* Adjust container width to fit new buttons */
+    width: 300px; /* Adjust container width to fit new buttons */
     margin: 150px auto; /* Center the container horizontally */
 }
 
@@ -19,14 +21,20 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin: 7px; /* Space between buttons */
-    padding: 5px;
+    margin: 5px; /* Space between buttons */
+    padding: 13px;
 }
 .display {
-    width: auto;
+    width: 290px;
     height: 30px;
-   background-color: #333;
+   background-color: #121212;
    color: white;
-   font-size: 15px;
+   font-size: 30px;
+   margin-bottom: -130px;
+   margin-top: 130px;
+   margin-left: 420px;
+   text-align: center;
+   font-style: initial;
+
     
 }

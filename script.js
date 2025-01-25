@@ -1,3 +1,4 @@
+   console.log("loaded")
    let buttons =  document.querySelectorAll(".inner-container")
    let display = document.querySelector(".display")
    let currentInput = ""
@@ -6,34 +7,43 @@
     button.addEventListener("click", () => {
    const value = button.value
    finalDisplay(value)
+   console.log(value)
     })
    })
    // 
     function finalDisplay (value){
-       if (value == "C"){
-        display.textContent = " "
-       }
-       else if ( value == "="){
-    try{
-        if (!isValidExpression(currentInput)){
-            display.textContent = "error"
+       switch (value) {
+        case  "C" :
             currentInput = ""
-            return;
-        }
-      currentInput = eval(currentInput).toString()
-      display.textContent = currentInput
-    } catch (error){
-     display.textContent = "error"
-    }
-    currentInput = ""
-       }
-       else{
-        currentInput  += value 
-        display.textContent = currentInput
+            display.textContent = currentInput
+            break
+        case "=" :
+            try {
+                if(!isValidExpression(currentInput)){
+                    currentInput = ""
+                    display.textContent  = "Error"
+                     currentInput = ""
+                     return
+                }
+                currentInput = eval(currentInput).toString()
+                display.textContent = currentInput
+            }
+            catch(error) {
+                display.textContent = "error"; // Catch evaluation errors
+                currentInput = ""; // Reset input
+            }
+            break
+             case "back" :
+               currentInput =  currentInput.slice(0 , -1)
+                 display.textContent = currentInput || ""
+                 break;
+                 default :
+                 currentInput += value
+                display.textContent = currentInput
        }
     }
     function isValidExpression(input) {
-        // Regular expression to match a valid math expression
+        // Regular expression to match a valid math expressio n
         const regex = /^[\d.]+([+\-*/][\d.]+)*$/;
         return regex.test(input);
       }
