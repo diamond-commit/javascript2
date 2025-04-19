@@ -1,59 +1,29 @@
-body {
-    background-color: #121212;
-}
- h1{
-    color: white;
- }
-.container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
-    width: 300px; /* Adjust container width to fit new buttons */
-    margin: 150px auto; /* Center the container horizontally */
-}
-
-.inner-container {
-    height: 20px; /* Set a fixed height */
+body{
+    margin: 0%;
     background-color: #333;
-    color: white;
-    font-size: 12px;
-    border: thin solid #444; /* Add a border */
-    cursor: pointer;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 5px; /* Space between buttons */
-    padding: 13px;
-}
-.display {
-    width: 290px;
-    height: 30px;
-   background-color: #121212;
-   color: white;
-   font-size: 30px;
-   margin-bottom: -130px;
-   margin-top: 130px;
-   margin-left: 420px;
-   text-align: center;
-   font-style: initial;
-
-    
-}
-@media (max-width: 600px) {
-   body{
-    h1{
-        font-size: 25px;
-    }
-    .display {
-        width: 290px;
-        height: 30px;
-       background-color: #121212;
-       color: white;
-       font-size: 25px;
-       margin-bottom: -130px;
-       margin-top: 130px;
-       margin-left: 52px;
-       text-align: center;
-       font-style: initial;
-    }
    }
-}
+    .container{
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+       margin: 150px auto;
+      width: 280px;
+    }
+  
+   button{   height: 30px;
+      background-color: #111;
+      color: aliceblue;
+      width: 70px;
+      margin: 3px;
+   }
+   .display{
+      height: 30px;
+     width: 180px;
+      color: aliceblue;
+      text-align: center;
+      font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+      margin-top: 150px;
+      margin-bottom: -119px;
+      margin-left: 495px;
+      line-height: 30px;
+   }
+  
